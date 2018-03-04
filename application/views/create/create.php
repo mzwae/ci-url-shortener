@@ -28,10 +28,10 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="<?=$this->lang->line('encode_type_url_here')?>" name="url_address">
+      <input type="text" class="form-control" placeholder="Type URL here..." name="url_address">
       <span class="input-group-btn">
         <button type="submit" class="btn btn-default">
-          <?=$this->lang->line('encode_encode_now')?>
+          Shorten URL
         </button>
       </span>
      </div> <!--input-group -->
@@ -41,9 +41,9 @@
 
 <br>
 
-<?php if($encoded_url == true): ?>
+<?php if ($encoded_url == true): ?>
   <div class="alert alert-info">
-    <strong><?=$this->lang->line('encode_encoded_url')?></strong>
-    <?=anchor($encoded_url, $encoded_url)?>
+    <strong>Shortened URL:</strong>
+    <a href="<?=$encoded_url?>"><?=$encoded_url?></a>
   </div>
 <?php endif; ?>

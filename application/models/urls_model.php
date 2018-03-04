@@ -19,11 +19,11 @@ class Urls_model extends CI_Model
             $url_code = random_string('alnum', 8);
 
             $this->db->where('url_code = ', $url_code);
-            $his->db->from('urls');
+            $this->db->from('urls');
             $num = $this->db->count_all_results();
         } while ($num >= 1);
 
-        $query = "INSERT INTO 'urls' ('url_code', 'url_address') VALUES (?, ?)";
+        $query = "INSERT INTO urls (url_code, url_address) VALUES (?, ?)";
         $result = $this->db->query($query, array($url_code, $data['url_address']));
 
         if ($result) {

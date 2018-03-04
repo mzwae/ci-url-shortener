@@ -13,6 +13,6 @@ class MY_Controller extends CI_Controller
         $this->load->helper('security');
         $this->load->helper('language');
         // Load language file
-        $this->lang->load('en_admin', 'english');
+        // $this->lang->load('en_admin', 'english');
     }
 }

@@ -8,6 +8,7 @@ class Create extends MY_Controller
 {
     public function __construct()
     {
+        parent::__construct();
         $this->load->helper('string');
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
@@ -20,19 +21,19 @@ class Create extends MY_Controller
         if ($this->form_validation->run() == false) {
             //Set initial values for the view
             $page_data = array(
-        'success_fail' => null ,
-        '$encoded_url' => false
-      );
+              'success_fail' => null,
+              'encoded_url' => false
+              );
 
             $this->load->view('templates/header');
-            $this->load->view('nav/top_nav');
+            // $this->load->view('nav/top_nav');
             $this->load->view('create/create', $page_data);
             $this->load->view('templates/footer');
         } else {
             // Begin to build data to be passed to database
             $data = array(
-        'url_address' => $this->input->post('url_address')
-      );
+              'url_address' => $this->input->post('url_address')
+            );
 
             $this->load->model('Urls_model');
             if ($res = $this->Urls_model->save_url($data)) {
@@ -44,10 +45,10 @@ class Create extends MY_Controller
             }
 
             // Build link which will be displayed to the user
-            $page_data['encoded_url'] = base_url() . '/' . $res;
+            $page_data['encoded_url'] = base_url() . $res;
 
             $this->load->view('templates/header');
-            $this->load->view('nav/top_nav)');
+            // $this->load->view('nav/top_nav)');
             $this->load->view('create/create', $page_data);
             $this->load->view('templates/footer');
         }
