@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>ciBlog</title>
+    <title>URL Shortener</title>
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/styles.css">
     <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>

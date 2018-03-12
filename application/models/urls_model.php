@@ -35,7 +35,7 @@ class Urls_model extends CI_Model
 
     public function fetch_url($url_code)
     {
-        $query = "SELECT * FROM 'urls' WHERE 'url_code' = ? ";
+        $query = "SELECT * FROM urls WHERE url_code = ?";
         $result = $this->db->query($query, array($url_code));
         if ($result) {
             return $result;
