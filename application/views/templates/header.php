@@ -22,7 +22,7 @@
       <!-- Collection of nav links and other content for toggling -->
       <div id="navbarCollapse" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-              <li class="nav-item"><a href="<?=base_url()?>">Home</a></li>
+              <li class="nav-item"><a href="<?=base_url()?>home">Home</a></li>
               <li class="nav-item"><a href="<?=base_url()?>about">About</a></li>
 
           </ul>
