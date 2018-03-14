@@ -1,5 +1,5 @@
-<div class="page-header">
-  <h1><?=$this->lang->line('system_system_name')?></h1>
+<div class="page-header text-center">
+  <h1>URL Shortener</h1>
 </div>
 
 <?php if ($success_fail == 'success'): ?>
@@ -10,9 +10,9 @@
 <?php if ($success_fail == 'fail'): ?>
   <div class="alert alert-danger">
     <strong>We could not shorten your url, see below for why</strong>
-
   </div>
 <?php endif; ?>
+
 <p>Enter a URL in the text box below and we'll shorten it</p>
 
 <?php

@@ -33,7 +33,6 @@ class Go extends MY_Controller
         );
 
                 $this->load->view('common/header');
-                $this->load->view('nav/top_nav');
                 $this->load->view('create/create', $page_data);
                 $this->load->view('common/footer');
             }

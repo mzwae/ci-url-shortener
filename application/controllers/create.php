@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('BASEPATH')) {
-    exit('No diret script access allowed!');
+    exit('No direct script access allowed!');
 }
 
 class Create extends MY_Controller
@@ -16,9 +16,10 @@ class Create extends MY_Controller
 
     public function index()
     {
-        $this->form_validation->set_rules('url_address', $this->lang->line('create_url_address'), 'required|min_length[1]|max_length[1000]|trim');
+        $this->form_validation->set_rules('url_address', 'URL Addresss', 'required|min_length[1]|max_length[1000]|trim');
 
         if ($this->form_validation->run() == false) {
+          echo "form validation was false";
             //Set initial values for the view
             $page_data = array(
               'success_fail' => null,
@@ -26,7 +27,6 @@ class Create extends MY_Controller
               );
 
             $this->load->view('templates/header');
-            // $this->load->view('nav/top_nav');
             $this->load->view('create/create', $page_data);
             $this->load->view('templates/footer');
         } else {
@@ -48,7 +48,6 @@ class Create extends MY_Controller
             $page_data['encoded_url'] = base_url() . $res;
 
             $this->load->view('templates/header');
-            // $this->load->view('nav/top_nav)');
             $this->load->view('create/create', $page_data);
             $this->load->view('templates/footer');
         }
