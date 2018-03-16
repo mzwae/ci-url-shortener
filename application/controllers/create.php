@@ -19,7 +19,6 @@ class Create extends MY_Controller
         $this->form_validation->set_rules('url_address', 'URL Addresss', 'required|min_length[1]|max_length[1000]|trim');
 
         if ($this->form_validation->run() == false) {
-          echo "form validation was false";
             //Set initial values for the view
             $page_data = array(
               'success_fail' => null,
