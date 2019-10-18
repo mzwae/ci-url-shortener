@@ -73,8 +73,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 $url = parse_url(getenv("JAWSDB_URL"));
-echo "This is db url: $url";
-var_dump($url); die();
+//echo "This is db url: $url";
+//var_dump($url); die();
 
 $db['default'] = array(
 	'dsn'	=> '',
