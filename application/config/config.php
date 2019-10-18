@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'https://mzapps-ciblog.herokuapp.com/';
-$config['base_url'] = 'http://localhost:8080/ci-url-shortener';
+ $config['base_url'] = 'https://mzapp-ci-url-shortener.herokuapp.com/';
+//$config['base_url'] = 'http://localhost:8080/ci-url-shortener';
 
 /*
 |--------------------------------------------------------------------------
