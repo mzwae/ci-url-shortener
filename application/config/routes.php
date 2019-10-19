@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['home'] = 'pages/view/home';
 $route['about'] = 'pages/view/about';
 $route['create'] = 'create/index';
-$route['default_controller'] = 'pages/view/home';
+$route['default_controller'] = 'pages/view';
 
 $route['welcome'] = 'welcome';
 
