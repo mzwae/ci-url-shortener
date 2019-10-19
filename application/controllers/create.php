@@ -2,7 +2,7 @@
 
 
 
-class Create extends MY_Controller
+class Create extends CI_Controller
 {
 /*
     public function __construct()
