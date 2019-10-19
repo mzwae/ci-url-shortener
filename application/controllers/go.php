@@ -16,9 +16,9 @@ class Go extends MY_Controller
 
     public function index()
     {
-      if (!defined('BASEPATH')) {
+     /* if (!defined('BASEPATH')) {
       exit('No direct script access allowed');
-        }
+        }*/
         if (!$this->uri->segment(1)) {
             redirect(base_url());
         } else {

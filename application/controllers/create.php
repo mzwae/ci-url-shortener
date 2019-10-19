@@ -15,9 +15,9 @@ class Create extends MY_Controller
 
     public function index()
     {
-        if (!defined('BASEPATH')) {
+      /*  if (!defined('BASEPATH')) {
             exit('No direct script access allowed!');
-        }
+        }*/
         $this->form_validation->set_rules('url_address', 'URL Addresss', 'required|min_length[1]|max_length[1000]|trim');
 
         if ($this->form_validation->run() == false) {
