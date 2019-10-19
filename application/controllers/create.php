@@ -6,13 +6,13 @@ if (!defined('BASEPATH')) {
 
 class Create extends MY_Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->helper('string');
-        $this->load->library('form_validation');
-        $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
-    }
+//    public function __construct()
+//    {
+//        parent::__construct();
+//        $this->load->helper('string');
+//        $this->load->library('form_validation');
+//        $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+//    }
 
     public function index()
     {
