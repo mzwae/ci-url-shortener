@@ -26,6 +26,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $config['base_url'] = 'https://mzapp-ci-url-shortener.herokuapp.com/';
 //$config['base_url'] = 'http://localhost:8080/ci-url-shortener';
 
+switch (ENVIRONMENT)
+{
+	case 'development':
+        $config['base_url'] = 'http://localhost:8080/ci-url-shortener';
+	break;
+
+	case 'production':
+        $config['base_url'] = 'https://mzapp-ci-url-shortener.herokuapp.com/';
+		
+	break;
+
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
+
 /*
 |--------------------------------------------------------------------------
 | Index File
