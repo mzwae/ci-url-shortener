@@ -16,12 +16,12 @@ class Create extends CI_Controller
     public function view()
     {
       echo "Hello, I'm the create controller!!!";
-      /*  if (!defined('BASEPATH')) {
+        if (!defined('BASEPATH')) {
             exit('No direct script access allowed!');
-        }*/
-//        $this->form_validation->set_rules('url_address', 'URL Addresss', 'required|min_length[1]|max_length[1000]|trim');
+        }
+        $this->form_validation->set_rules('url_address', 'URL Addresss', 'required|min_length[1]|max_length[1000]|trim');
 
-    /*    if ($this->form_validation->run() == false) {
+        if ($this->form_validation->run() == false) {
             //Set initial values for the view
             $page_data = array(
               'success_fail' => null,
@@ -52,6 +52,6 @@ class Create extends CI_Controller
             $this->load->view('templates/header');
             $this->load->view('create/create', $page_data);
             $this->load->view('templates/footer');
-        }*/
+        }
     }
 }
