@@ -11,10 +11,6 @@ class Go extends MY_Controller
         parent::__construct();
         $this->load->helper('string');
     }
-  
-  public function test(){
-    echo "I'm the Go ctroller!";
-  }
 
     public function index()
     {
