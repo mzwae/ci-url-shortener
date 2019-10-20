@@ -6,19 +6,19 @@ class Go extends MY_Controller
 {
   
   
-/*    public function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->load->helper('string');
     }
-  */
+  
   
 
     public function index()
     {
-     /* if (!defined('BASEPATH')) {
+      if (!defined('BASEPATH')) {
       exit('No direct script access allowed');
-        }*/
+        }
         if (!$this->uri->segment(1)) {
             redirect(base_url());
         } else {

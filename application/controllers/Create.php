@@ -2,20 +2,19 @@
 
 
 
-class Create extends CI_Controller
+class Create extends MY_Controller
 {
-/*
+
     public function __construct()
     {
         parent::__construct();
         $this->load->helper('string');
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
-    }*/
+    }
 
-    public function view()
+    public function index()
     {
-      echo "Hello, I'm the create controller!!!";
         if (!defined('BASEPATH')) {
             exit('No direct script access allowed!');
         }
