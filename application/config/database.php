@@ -74,12 +74,38 @@ $active_group = 'default';
 $query_builder = TRUE;
 //$url = parse_url(getenv("JAWSDB_URL"));
 
+
+switch (ENVIRONMENT)
+{
+	case 'development':
+        $config['base_url'] = 'http://localhost:8080/ci-url-shortener';
+        $hostname = "localhost";
+        $username = "root";
+        $password = "123456";
+        $database = "urls";
+	break;
+
+	case 'production':
+        $config['base_url'] = 'https://mzapp-ci-url-shortener.herokuapp.com/';
+        $hostname =  $_SERVER['HOSTNAME'];
+        $username = $_SERVER['USERNAME'];
+        $password = $_SERVER['PASSWORD'];
+        $database = $_SERVER['DBNAME'];
+		
+	break;
+
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'y0nkiij6humroewt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',// 'localhost'
-	'username' => 'w6twel69qbdpqs3i',// 'root'
-	'password' => 'ylahud06h2g8cjmy',// '123456'
-	'database' => 'rb7nk8xgjx4mrdi4',//'urls'
+	'hostname' => $hostname,// 'localhost'
+	'username' => $username,// 'root'
+	'password' => $password,// '123456'
+	'database' => $database,//'urls'
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
