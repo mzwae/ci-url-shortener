@@ -78,7 +78,6 @@ $query_builder = TRUE;
 switch (ENVIRONMENT)
 {
 	case 'development':
-        // $config['base_url'] = 'http://localhost:8080/ci-url-shortener';
         $hostname = "localhost";
         $username = "root";
         $password = "123456";
@@ -86,7 +85,6 @@ switch (ENVIRONMENT)
 	break;
 
 	case 'production':
-        // $config['base_url'] = 'https://mzapp-ci-url-shortener.herokuapp.com/';
         $hostname =  $_SERVER['HOSTNAME'];
         $username = $_SERVER['USERNAME'];
         $password = $_SERVER['PASSWORD'];
